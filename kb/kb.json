@@ -1,0 +1,12 @@
+[
+  {"q": "How can I improve team productivity?", "a": "Use daily stand-ups, set clear OKRs, and encourage time-blocking.", "topic": "productivity", "tags": ["OKRs", "time-blocking"]},
+  {"q": "Tips for remote work?", "a": "Maintain a fixed schedule, use video check-ins, and set clear boundaries.", "topic": "remote work", "tags": ["schedule", "check-ins", "boundaries"]},
+  {"q": "How to prioritize tasks?", "a": "Use the Eisenhower Matrix: categorize into urgent/important, schedule or delegate accordingly.", "topic": "prioritization"},
+  {"q": "How to manage startup funding?", "a": "Track runway monthly, maintain investor updates, and plan funding rounds early.", "topic": "startup"},
+  {"q": "Best practices for async communication?", "a": "Use clear subjects, summaries, and agreed SLAs; favor docs over meetings.", "topic": "communication"},
+  {"q": "How to run effective 1:1 meetings?", "a": "Keep a shared agenda, focus on growth and blockers, capture actions with owners.", "topic": "management"},
+  {"q": "How to reduce meeting load?", "a": "Adopt a meeting policy, default to docs, use 25/50 minute slots, and enforce agendas.", "topic": "productivity"},
+  {"q": "How to set quarterly goals?", "a": "Draft company-level OKRs, cascade to teams, align metrics, review mid-quarter.", "topic": "planning"},
+  {"q": "Tips for task estimation?", "a": "Break work into small units, compare to historical tasks, and add buffer for unknowns.", "topic": "execution"},
+  {"q": "How to onboard new hires remotely?", "a": "Provide a 30-60-90 plan, assign a buddy, and set early wins with documented resources.", "topic": "remote work"}
+] 

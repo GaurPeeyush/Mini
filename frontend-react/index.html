@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini AI Chatbot</title>
+    <style>
+      :root{
+        --bg:#0f172a; --panel:#111827; --muted:#94a3b8; --accent:#22c55e; --accent-2:#16a34a; --chip:#1f2937; --white:#f8fafc;
+      }
+      html,body,#root{height:100%}
+      body{margin:0;background:linear-gradient(180deg,#0b1324,#0f172a);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto}
+      .container{max-width:960px;margin:0 auto;padding:24px}
+      .card{background:var(--panel);border:1px solid #1f2937;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+      .header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #1f2937}
+      .brand{display:flex;align-items:center;gap:10px}
+      .brand-badge{background:var(--chip);border-radius:999px;padding:6px 10px;font-size:12px;color:var(--muted)}
+      .main{padding:20px}
+      .row{display:flex;gap:12px}
+      .input{flex:1;padding:14px 16px;border-radius:12px;border:1px solid #334155;background:#0b1220;color:var(--white)}
+      .btn{padding:12px 16px;border-radius:12px;border:1px solid #1f2937;background:var(--accent);color:#04120a;cursor:pointer;font-weight:600}
+      .btn:hover{background:var(--accent-2)}
+      .outline{background:transparent;color:var(--white);border-color:#334155}
+      .outline:hover{background:#111827}
+      .answer{background:#0b1220;border:1px solid #1f2937;border-radius:12px;padding:16px;margin-top:16px}
+      details{background:#0a1220;border:1px solid #1f2937;border-radius:12px;margin-top:12px}
+      summary{padding:12px 16px;cursor:pointer;color:var(--muted)}
+      .trace{padding:0 16px 16px 16px;color:#cbd5e1}
+      .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+      .chip{background:var(--chip);border:1px solid #1f2937;border-radius:999px;padding:6px 10px;color:#cbd5e1;font-size:12px}
+      .footer{padding:12px 20px;border-top:1px solid #1f2937;color:var(--muted);font-size:12px}
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html> 
