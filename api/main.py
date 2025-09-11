@@ -4,6 +4,10 @@ from api.models import AskRequest, AskResponse, ClearHistoryResponse
 from bot.kb_chatbot import KbChatbot
 from kb.storage import append_entry, load_recent, clear_history
 import uvicorn
+import os
+import subprocess
+from typing import Optional
+from config.settings import Settings
 
 app = FastAPI(title="Mini AI Chatbot API")
 
@@ -43,6 +47,29 @@ async def history_clear():
     try:
         clear_history()
         return ClearHistoryResponse(success=True)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/reindex")
+async def reindex(index: Optional[str] = None, embed_model: Optional[str] = None):
+    try:
+        settings = Settings()
+        idx = index or settings.PINECONE_INDEX_KB
+        em = embed_model or settings.OPENAI_EMBED_MODEL
+        env = os.environ.copy()
+        env["OPENAI_API_KEY"] = settings.OPENAI_API_KEY
+        env["PINECONE_API_KEY"] = settings.PINECONE_API_KEY
+        cmd = [
+            "python", str((os.path.dirname(__file__))) + "/reindex_kb.py",
+            "--index", idx,
+            "--kb", str((os.path.dirname(__file__)) + "/../kb/kb.json"),
+            "--embed-model", em,
+        ]
+        proc = subprocess.run(cmd, env=env, capture_output=True, text=True)
+        ok = proc.returncode == 0
+        if not ok:
+            raise RuntimeError(proc.stderr or proc.stdout)
+        return {"success": True, "stdout": proc.stdout}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

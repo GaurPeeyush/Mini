@@ -70,11 +70,11 @@ function App(){
           <div className="brand">
             <div style={{width:10,height:10,borderRadius:999,background:'#22c55e'}} />
             <strong>Mini AI Chatbot</strong>
-            <span className="brand-badge">Pinecone • SentenceTransformers • Claude</span>
+            <span className="brand-badge">Pinecone • text-embedding-3-small • OpenAI</span>
           </div>
           <div className="chips">
             <Badge label="KB" />
-            <Badge label="Cosine 384-d" />
+            <Badge label="Cosine 1536-d" />
             <Badge label="Serverless" />
           </div>
         </div>
@@ -127,7 +127,7 @@ function App(){
           </div>
         </div>
 
-        <div className="footer">Built with Pinecone Vector DB and Claude fallback • Demo</div>
+        <div className="footer">Built with Pinecone Vector DB and OpenAI fallback • Demo</div>
       </div>
     </div>
   )

@@ -4,6 +4,5 @@ pydantic
 pydantic-settings
 python-dotenv
 pinecone
-anthropic
-sentence-transformers
+openai
 tqdm
