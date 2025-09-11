@@ -72,6 +72,12 @@ curl http://localhost:8000/history?limit=10
   "trace": ["..."]
 }
 ```
+## Sample Conversations
+<img width="1920" height="1072" alt="Screenshot 2025-09-11 at 10 18 55 PM" src="https://github.com/user-attachments/assets/f6b13864-875c-483a-8b89-41a50c5455bf" /> <br>
+<img width="1920" height="1072" alt="Screenshot 2025-09-11 at 10 19 50 PM" src="https://github.com/user-attachments/assets/49455204-15f2-4631-80e5-00403a22a745" />
+
+
+
 
 ## Notes
 - Set `PINECONE_INDEX_KB` to the index you reindexed.
